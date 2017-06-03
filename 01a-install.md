@@ -54,7 +54,7 @@ Did you install Python 2 or 3? Why?
 
 How can you check the version of Python installed if you happen to be on an unfamiliar computer?
 
->> I installed python 3 because when I type in python on the command line it tells me I have version 3.6.
+>> I installed Python 3 because when I type in 'python' on the command line it tells me I have version 3.6.
 
  
 
