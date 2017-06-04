@@ -70,8 +70,8 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > xargs break down a potentially long list into sublist that is short enough for a command to operate on.
-    For example, 'rm find /path -type f' may return an error message saying that the list of things to remove, fed in by 'find' is too long. However, 'find /path -type f | xargs rm' will break the long list of items into sublists so that 'rm' will be able to execute accordingly.
+> > xargs builds and accept command lines from standard input. 
+One potentially good use of it is that it break down a potentially long list into sublist that is short enough for a command to operate on. For example, 'rm find /path -type f' may return an error message saying that the list of things returned by find is not executable (removable in this case). However, 'find /path -type f | xargs rm' will break the long list of items into sublists (each individual items) so that 'rm' will be able to execute each individual items accordingly.
 
  
 
