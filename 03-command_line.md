@@ -21,13 +21,13 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 
 > > pwd : show current directory  
     mkdir <directory anme> : create new directory  
-    rm -r <directory name> : recursively deleting specified directory
-    touch : create a file
-    rm : remove a file
-    mv <original file> <new file name> : rename file
-    ls -a : list hidden files
-    ls -l : list files in long format
-    ls - t : list files ordered by last modified date
+    rm -r <directory name> : recursively deleting specified directory  
+    touch : create a file  
+    rm : remove a file  
+    mv <original file> <new file name> : rename file  
+    ls -a : list hidden files  
+    ls -l : list files in long format  
+    ls - t : list files ordered by last modified date  
     cp <file to be copied> <destinated directory> : copying a file from one directory to another
 
 ---
@@ -43,7 +43,14 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls : refer to question 1  
+    ls -a : refer to question 1  
+    ls -l : refer to question 1  
+    ls -lh : list long format in human readbale format  
+    ls -lah : same as ls -lh plus hidden file  
+    ls -t : refer to question 1
+    ls -Glp : list everything i scurrent directory in long format, appending "directory fomat" as the the last info to the            long format, and specifying inhibitng group information.  
+    
 
 ---
 
