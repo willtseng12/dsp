@@ -58,7 +58,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls -1  
+    ls -r  
+    ls -G  
+    ls -m  
+    ls -q
 
 ---
 
@@ -66,7 +70,8 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > xargs break down a potentially long list into sublist that is short enough for a command to operate on.
+    For example, 'rm find /path -type f' may return an error message saying that the list of things to remove, fed in by 'find' is too long. However, 'find /path -type f | xargs rm' will break the long list of items into sublists so that 'rm' will be able to execute accordingly.
 
  
 
