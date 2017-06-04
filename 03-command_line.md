@@ -19,7 +19,16 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > pwd : show current directory
+    mkdir <directory anme> : create new directory
+    rm -r <directory name> : recursively deleting specified directory
+    touch : create a file
+    rm : remove a file
+    mv <original file> <new file name> : rename file
+    ls -a : list hidden files
+    ls -l : list files in long format
+    ls - t : list files ordered by last modified date
+    cp <file to be copied> <destinated directory> : copying a file from one directory to another
 
 ---
 
