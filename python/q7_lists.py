@@ -15,7 +15,11 @@ def match_ends(words):
     >>> match_ends(['aaa', 'be', 'abc', 'hello'])
     1
     """
-    raise NotImplementedError
+    count = 0
+    for string in words:
+        if len(string) > 2:
+            count += 1
+    return count
 
 
 def front_x(words):
@@ -32,7 +36,23 @@ def front_x(words):
     >>> front_x(['mix', 'xyz', 'apple', 'xanadu', 'aardvark'])
     ['xanadu', 'xyz', 'aardvark', 'apple', 'mix']
     """
-    raise NotImplementedError
+    finalList = []
+    tempList = [] # to temporarily store strings that don't begin with 'x'
+    for string in words:
+        if string[0] == 'x':
+            finalList.append(string)
+    
+    finalList = sorted(finalList, key = lambda x: x[1:]) # sort the strings that begin with 'x'
+    
+    for string in words:
+        if string[0] != 'x':
+            tempList.append(string)
+    
+    finalList.extend(sorted(tempList))  
+    
+    return finalList 
+        
+            
 
 
 def sort_last(tuples):
@@ -49,7 +69,7 @@ def sort_last(tuples):
     >>> sort_last([(1, 7), (1, 3), (3, 4, 5), (2, 2)])
     [(2, 2), (1, 3), (3, 4, 5), (1, 7)]
     """
-    raise NotImplementedError
+    return sorted(tuples, key = lambda x: x[-1])
 
 
 def remove_adjacent(nums):
@@ -68,7 +88,16 @@ def remove_adjacent(nums):
     >>> remove_adjacent([])
     []
     """
-    raise NotImplementedError
+    if len(nums) == 0:
+        return nums
+    
+    finalList = [nums[0]]
+    previousNum = nums[0]
+    for num in nums[1:]:
+        if num != previousNum:
+            finalList.append(num)
+        previousNum = num
+    return finalList
 
 
 def linear_merge(list1, list2):
@@ -85,4 +114,28 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    raise NotImplementedError
+    finalList = []
+    index1 = 0
+    index2 = 0
+    
+    while len(finalList) != len(list1) + len(list2):
+            
+        if index1 == len(list1):
+            finalList.extend(list2[index2:])
+            break
+        
+        if index2 == len(list2):
+            finalList.extend(list1[index1:])
+            break
+        
+        if list1[index1] <= list2[index2]:
+            finalList.append(list1[index1])
+            index1 += 1
+        else:
+            finalList.append(list2[index2])
+            index2 += 1
+    
+    return finalList
+        
+         
+            
