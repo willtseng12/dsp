@@ -51,7 +51,7 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
    set comprehension:
    ```python
    t = {x**2 for x in range(5) if x < 4}
-   print(s)
+   print(t)
    ```
    will	return	
    ```python
@@ -60,6 +60,7 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
    dictionary comprehension:
    ```python
    u = {x :x**2 for x in range(5) if x < 4 }
+   print(u)
    ```
    will return
    ```python
@@ -69,9 +70,17 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
    ```python
    list(map(lambda x: x**2, [0,1,2]))
    ```
+   this will return:
+   ```python
+   [0,1,4]
+   ```	
    `filter` can do the similar thing as well as list comprehension. Here it filter another list that only contains number less than 4:
    ```python
    list(filter(lambda x: x<4, [0,1,2,3,4,5]))
+   ```
+   this will return:
+   ```python
+   [0,1,2,3]
    ```
    The list comprehension is more syntactically friendly since you don't need to input in a lambda function. But depending on the situation a `map` or a `filter` may be more appropriate to the situation.
 
