@@ -97,7 +97,8 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> ```python
+>>
+   ```python
    from datetime import date
    date_start = date(2013,1,2)
    date_stop = date(2015,7,28)
@@ -115,7 +116,8 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> ```python
+>>
+   ```python
    import datetime
    date_start = datetime.datetime.strptime('12312013','%m%d%Y').date()
    date_stop = datetime.datetime.strptime('05282015','%m%d%Y').date()
@@ -133,7 +135,8 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> ```python
+>>
+   ```python
    import datetime
    date_start = datetime.datetime.strptime('15-Jan-1994','%d-%b-%Y').date()
    date_stop = datetime.datetime.strptime('14-Jul-2015','%d-%b-%Y').date()
