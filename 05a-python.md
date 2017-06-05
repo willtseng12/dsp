@@ -97,7 +97,16 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> ```python
+   from datetime import date
+   date_start = date(2013,1,2)
+   date_stop = date(2015,7,28)
+   (date_stop - date_start).days
+   ```
+   will return
+   ```python
+   937
+   ```
 
 b.  
 ```
@@ -105,7 +114,16 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+>> ```python
+   import datetime
+   date_start = datetime.datetime.strptime('12312013','%m%d%Y').date()
+   date_stop = datetime.datetime.strptime('05282015','%m%d%Y').date()
+   (date_stop - date_start).days
+   ```
+   will return
+   ```python
+   513
+   ```
 
 c.  
 ```
@@ -113,7 +131,16 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+>> ```python
+    import datetime
+    date_start = datetime.datetime.strptime('15-Jan-1994','%d-%b-%Y').date()
+    date_stop = datetime.datetime.strptime('14-Jul-2015','%d-%b-%Y').date()
+    (date_stop - date_start).days
+    ```
+    will return 
+    ```python
+    7850
+    ```
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
