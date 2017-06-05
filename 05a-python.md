@@ -74,6 +74,7 @@ Explain list comprehensions. Give examples and show equivalents with `map` and `
    list(filter(lambda x: x<4, [0,1,2,3,4,5]))
    ```
    The list comprehension is more syntactically friendly since you don't need to input in a lambda function. But depending on the situation a `map` or a `filter` may be more appropriate to the situation.
+
 ---
 
 ### Complete the following problems by editing the files below:
