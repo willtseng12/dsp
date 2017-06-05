@@ -32,7 +32,7 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
    `sorted(['ac', 'da', 'bz'], key = lambda   x: x[1]` in python will return 
    ```python
    ['da', 'ac', 'bz']
-   # sorted by the second letter of each string
+   # sorted by the second letter of each string instead of the first
     ```
 
 ---
