@@ -108,7 +108,8 @@ date_stop = '07-28-2015'
    937
    ```
 
-b.  
+b.
+  
 ```
 date_start = '12312013'  
 date_stop = '05282015'  
@@ -125,22 +126,23 @@ date_stop = '05282015'
    513
    ```
 
-c.  
+c.
+  
 ```
 date_start = '15-Jan-1994'      
 date_stop = '14-Jul-2015'  
 ```
 
 >> ```python
-    import datetime
-    date_start = datetime.datetime.strptime('15-Jan-1994','%d-%b-%Y').date()
-    date_stop = datetime.datetime.strptime('14-Jul-2015','%d-%b-%Y').date()
-    (date_stop - date_start).days
-    ```
-    will return 
-    ```python
-    7850
-    ```
+   import datetime
+   date_start = datetime.datetime.strptime('15-Jan-1994','%d-%b-%Y').date()
+   date_stop = datetime.datetime.strptime('14-Jul-2015','%d-%b-%Y').date()
+   (date_stop - date_start).days
+   ```
+   will return 
+   ```python
+   7850
+   ```
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
