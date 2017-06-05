@@ -34,14 +34,6 @@ Describe Python's `lambda`. What is it, and what is it used for? Give at least o
    ['da', 'ac', 'bz']
    # sorted by the second letter of each string  
     ```
-=======
->> lambda is an	annoymous function typically used to execute simple task on items. This is used instead of the traditional way to declare a	function. For example,
-   `sorted(['ac', 'da', 'bz'], key = lambda   x: x[1]`
-   ```python
-   sorted(['ac', 'da', 'bz'], key = lambda x: x[1])
-   ```
->>>>>>> bf65d6b16683e327367c5a833d7fd88ad0f8014d
-
 ---
 
 ### Q4. List Comprehension, Map &amp; Filter
