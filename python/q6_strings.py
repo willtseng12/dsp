@@ -18,7 +18,10 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    return "Number of donuts: " + count
+    if count < 10:
+        return "Number of donuts: " + str(count)
+    else:
+        return "Number of donuts: many"
 
 
 def both_ends(s):
