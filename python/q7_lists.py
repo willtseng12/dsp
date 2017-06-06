@@ -17,7 +17,7 @@ def match_ends(words):
     """
     count = 0
     for string in words:
-        if len(string) > 2:
+        if len(string) >= 2 and string[0] == string[-1]:
             count += 1
     return count
 
@@ -114,28 +114,43 @@ def linear_merge(list1, list2):
     >>> linear_merge(['aa', 'aa'], ['aa', 'bb', 'bb'])
     ['aa', 'aa', 'aa', 'bb', 'bb']
     """
-    finalList = []
-    index1 = 0
-    index2 = 0
+#     finalList = []
+#     index1 = 0
+#     index2 = 0
     
-    while len(finalList) != len(list1) + len(list2):
+#     while len(finalList) != len(list1) + len(list2):
             
-        if index1 == len(list1):
-            finalList.extend(list2[index2:])
-            break
+#         if index1 == len(list1):
+#             finalList.extend(list2[index2:])
+#             break
         
-        if index2 == len(list2):
-            finalList.extend(list1[index1:])
-            break
+#         if index2 == len(list2):
+#             finalList.extend(list1[index1:])
+#             break
         
-        if list1[index1] <= list2[index2]:
-            finalList.append(list1[index1])
-            index1 += 1
-        else:
-            finalList.append(list2[index2])
-            index2 += 1
+#         if list1[index1] <= list2[index2]:
+#             finalList.append(list1[index1])
+#             index1 += 1
+#         else:
+#             finalList.append(list2[index2])
+#             index2 += 1
     
-    return finalList
+#     return finalList
+
+# a better way to do this as seen in Metis Python part 1 HackerRank
+    
+    finalList = []
+    while list1 and list2:
+        if list1[0] < list2[0]:
+            finalList.append(list1.pop(0))
+        else:
+            finalList.append(list2.pop(0))
+    return finalList + list1 + list2 
+      
+
+      
+
+
         
          
             
