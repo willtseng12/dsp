@@ -103,4 +103,8 @@ for key in list(faculty_dict2.keys())[0:3]:
 # print out key value pairs in alphabetical order of last name 
 print(faculty_dict2)
 
+<<<<<<< HEAD
  
+=======
+ 
+>>>>>>> 1f40db0a6240b9965e1526940af7da19dadce5bf
