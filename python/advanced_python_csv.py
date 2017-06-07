@@ -16,7 +16,7 @@ emails = []
 for faculty in lol[1:]:
     emails.append(faculty[3].strip())
     
-# writing in file
+# writing out file
 
 with open('email.csv', 'w') as file:
     for email in emails:
