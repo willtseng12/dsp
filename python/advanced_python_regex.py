@@ -1,6 +1,7 @@
 
 import csv
 
+#Q1
 # trying to figure out how many different degrees there are
 # reading in file
 
@@ -28,9 +29,10 @@ print(numOfDegrees)
 
 
 
-####################
-####################
+###################
 
+
+#Q2
 # trying to figure out how many different titles there are and respective frequencies
 
 titles = {}
@@ -64,9 +66,10 @@ print(titles.keys())
 print((titles.values()))
   
 
-####################
-####################  
+###################
+ 
 
+#Q3
 # trying to print out the list of email addresses
 
 emails = []
@@ -76,9 +79,10 @@ for faculty in lol[1:]:
 print(emails)
 print(len(emails))
 
-####################
-####################  
+###################
+ 
 
+#Q4
 # trying to print out the list of unique email address domains
 
 domains = []
