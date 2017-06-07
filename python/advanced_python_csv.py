@@ -1,6 +1,8 @@
 
 import csv
 
+#Q5
+
 # reading in file
 
 lol = []
