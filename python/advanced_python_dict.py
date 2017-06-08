@@ -1,5 +1,6 @@
 
 import csv
+import re
 
 ###################
 ###################
@@ -14,12 +15,11 @@ def degree_formatter(title):
     degListIterable = degList[:]
     
     for index, deg in list(enumerate(degListIterable)):
-        if 'PhD' in deg.replace('.','') or deg.isdigit(): 
-            # make uniform all Ph.D degrees. One typo '0' case
+        if re.match(r'(.*Ph.*|\d*)', title, re.I):
             degList[index] = 'Ph.D'
-        elif 'ScD' in deg.replace('.',''):
+        elif re.match(r'.*Sc.*', title, re.I):
             degList[index] = 'Sc.D'
-        elif 'MS' in deg.replace('.',''):
+        elif re.match(r'.*MS.*', title, re.I):
             degList[index] = 'MS'
     
     return ' '.join(degList)
@@ -33,11 +33,11 @@ def title_formatter(title):
     title: a string representing title(s) (unformatted)
     return: a string representing title(s) (formatted)
     """
-    if 'Assistant' in title:
+    if re.match(r'Assistant.*Prof.*', title, re.I):
         return 'Assistant Professor'
-    elif 'Associate' in title:
+    elif re.match(r'Associate.*Prof.*', title, re.I):
         return 'Associate Professor'
-    elif 'Professor' in title:
+    elif re.match(r'.*Prof.*', title, re.I):
         return 'Professor'
     else:
         return title
@@ -76,7 +76,7 @@ for key in list(faculty_dict.keys())[0:3]:
     print(str(key) + ': ' + str(faculty_dict[key]))
     
 
-###################
+##################
 
 #Q7
 
@@ -97,7 +97,7 @@ for key in list(faculty_dict2.keys())[0:3]:
     print(str(key) + ': ' + str(faculty_dict2[key]))
 
 
-###################
+####################
 
 #Q8
 # print out key value pairs in alphabetical order of last name 

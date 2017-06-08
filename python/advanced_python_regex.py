@@ -1,5 +1,6 @@
 
 import csv
+import re
 
 #Q1
 # trying to figure out how many different degrees there are
@@ -37,19 +38,19 @@ print(numOfDegrees)
 
 titles = {}
 for faculty in lol[1:]:
-    if 'Assistant' in faculty[2]:
+    if re.match(r'Assistant.*Prof.*', faculty[2], re.I):
         if 'Assistant Professor' in titles.keys():
             titles['Assistant Professor'] += 1
         else:
             titles['Assistant Professor'] = 1
     
-    elif 'Associate' in faculty[2]:
+    elif re.match(r'Associate.*Prof.*', faculty[2], re.I):
         if 'Associate Professor' in titles.keys():
             titles['Associate Professor'] += 1
         else:
             titles['Associate Professor'] = 1
     
-    elif 'Professor' in faculty[2]:
+    elif re.match(r'.*Prof.*', faculty[2], re.I):
         if 'Professor' in titles.keys():
             titles['Professor'] += 1
         else:
