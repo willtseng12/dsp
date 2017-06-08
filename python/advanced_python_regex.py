@@ -57,14 +57,13 @@ for faculty in lol[1:]:
             titles['Professor'] = 1
     
     else:
-        if titles[faculty[2]] in titles.keys():
+        if faculty[2] in titles.keys():
             titles[faculty[2]] += 1
         else:
             titles[faculty[2]] = 1
         
     
-print(titles.keys())
-print((titles.values()))
+print(titles)
   
 
 ###################

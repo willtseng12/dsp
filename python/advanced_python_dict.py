@@ -16,11 +16,11 @@ def degree_formatter(title):
     
     for index, deg in list(enumerate(degListIterable)):
         print(list(enumerate(degListIterable)))
-        if re.match(r'(.*Ph.*|\d)', deg, re.I):
+        if re.match(r'(Ph.*|\d)', deg, re.I):
             degList[index] = 'Ph.D'
-        elif re.match(r'.*Sc.*', deg, re.I):
+        elif re.match(r'Sc.*', deg, re.I):
             degList[index] = 'Sc.D'
-        elif re.match(r'.*M.?S.*', deg, re.I):
+        elif re.match(r'M.?S.*', deg, re.I):
             degList[index] = 'MS'
     
     print(degList)
@@ -50,7 +50,7 @@ def title_formatter(title):
 
 # Q6
 
-# reading in file
+#reading in file
 
 lol = []
 with open('faculty.csv', 'r') as csvfile:
@@ -86,13 +86,19 @@ for key in list(faculty_dict.keys())[0:3]:
 faculty_dict2 = {}
 
 for faculty in lol[1:]:
-    lastName = faculty[0].split(' ')[-1]
-    firstName = faculty[0].split(' ')[0]
+    name = faculty[0].split(' ')
+    lastName = name[-1]
+    firstName = name[0]
+    if len(name) > 2:
+        nameFormat = [firstName, name[1], lastName]
+    else:
+        nameFormat = [firstName, lastName]
+    
     degree = degree_formatter(faculty[1])
     title = title_formatter(faculty[2])
     email = faculty[3]
-    
-    faculty_dict2[(firstName, lastName)] = [degree, title, email]
+
+    faculty_dict2[tuple(nameFormat)] = [degree, title, email]
 
 # print the first three key value pairs        
 for key in list(faculty_dict2.keys())[0:3]:
@@ -104,4 +110,3 @@ for key in list(faculty_dict2.keys())[0:3]:
 #Q8
 # print out key value pairs in alphabetical order of last name 
 print(faculty_dict2)
-
