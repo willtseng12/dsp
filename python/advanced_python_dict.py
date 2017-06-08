@@ -15,11 +15,11 @@ def degree_formatter(title):
     degListIterable = degList[:]
     
     for index, deg in list(enumerate(degListIterable)):
-        if re.match(r'(.*Ph.*|\d*)', title, re.I):
+        if re.match(r'(.*Ph.*|\d*)', deg, re.I):
             degList[index] = 'Ph.D'
-        elif re.match(r'.*Sc.*', title, re.I):
+        elif re.match(r'.*Sc.*', deg, re.I):
             degList[index] = 'Sc.D'
-        elif re.match(r'.*MS.*', title, re.I):
+        elif re.match(r'.*MS.*', deg, re.I):
             degList[index] = 'MS'
     
     return ' '.join(degList)
