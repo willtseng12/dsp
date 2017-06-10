@@ -6,12 +6,12 @@ import re
 ###################
 # helper function 1
 
-def degree_formatter(title):
+def degree_formatter(degree):
     """
     title: a string representi:ng degree(s) (unformatted)
     return: a string representing degree(s) (formatted)
     """
-    degList = title.strip().split(' ') # split into list
+    degList = degree.strip().split(' ') # split into list
     degListIterable = degList[:]
     
     for index, deg in list(enumerate(degListIterable)):
