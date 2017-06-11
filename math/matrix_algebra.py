@@ -1,4 +1,5 @@
 # Matrix Algebra
+# question formats from Metis HackerRank
 import numpy as np
 
 # Do not change these variables
