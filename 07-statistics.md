@@ -106,14 +106,14 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 >> 
 >> Using the Law of total probability and Bayes Rule we can write in this case:  
 >> (4) P(T<sub>B</sub>) = P(T<sub>B</sub> | I) * P(I) + P(T<sub>B</sub> | F) * P(F)
-   
+>>   
 >> Subsituting (4) into (3) we get:  
 >> (5) P(I | T<sub>B</sub>) = P(T<sub>B</sub> | I) * P(I) / (P(T<sub>B</sub> | I) * P(I) + P(T<sub>B</sub> | F) * P(F))
-   
+>>   
 >> Because identical twins are of the same sex and assuming the birth of a child has equal probability of being either sex, P(T<sub>B</sub> | I) is the probability of twin boys given identical twin, and is (1/2). 
-   
+>>   
 >> On the other hand, fraternal twins need not be of the same sex. Given the same assumptions as above, we have P(T<sub>B</sub> | F) = (1/4).
-   
+>>   
 >> Plugging the value in the equation we have:  
 >> P(I | T<sub>B</sub>) = (1/2) * (1/300) / ((1/2) * (1/300) + (1/4) * (1/125))
 >> = 5/11
