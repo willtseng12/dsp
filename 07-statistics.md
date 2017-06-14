@@ -123,7 +123,7 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 ### Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> The frequentist approach views probability as the number of occurence of an event over the number of trials (relative frequency) in the long run. In other words, data (the result) can vary due to randomness even if the parameters are fixed (identical trials). On the other hand, the Bayesian approach view probability as outcome of an event as the result of different sets of initial conditions. In other words, data cannot vary if they all occur under the same initial condition. And the reason why they vary is because there are multiple ways to set up the parameters (intial conditions).
 
 ---
 
