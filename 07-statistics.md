@@ -102,7 +102,7 @@ Elvis Presley had a twin brother who died at birth.  What is the probability tha
 >> 
 >> Now, let take a look at P(T<sub>B</sub>). According to the law of total probability, we can visualize the probability of an event as the sum of the probability of all the intersections of the non-overlapping partitions and the event. 
 >> 
->> ie. P(A) = P(A ∩ p<sub>1</sub>) + P(A ∩ p<sub>2</sub>) + ... + P(A ∩ p<sub>n</sub>)  where 'n' is the number of non-overlapping partitions in the sample space that intersects with event A
+>> ie. P(A) = P(A ∩ p<sub>1</sub>) + P(A ∩ p<sub>2</sub>) + ... + P(A ∩ p<sub>n</sub>)  where 'n' is the number of non-overlapping partitions in the sample space that intersects with event 'A' and exhausts it.
 >> 
 >> Using the Law of total probability and Bayes Rule we can write in this case:  
 >> (4) P(T<sub>B</sub>) = P(T<sub>B</sub> | I) * P(I) + P(T<sub>B</sub> | F) * P(F)
