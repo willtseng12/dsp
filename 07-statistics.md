@@ -86,51 +86,38 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> We first denote probabilities P(F) as fraternal twins, P(I) as identical twins, and P(T<sub>B</sub>) as twin brothers.
+   We first denote probabilities P(F) as fraternal twins, P(I) as identical twins, and P(T<sub>B</sub>) as twin brothers.
    We want to find the probability of identical twin given twin brothers P(I | T<sub>B</sub>)
    
    Bayes rule: P(A | B) = P(A ∩ B) / P(B) 
    
-   
    Since P(A ∩ B) = P(B ∩ A) we can therefore write:  
-   
    (1) P(I | T<sub>B</sub>) = P(T<sub>B</sub> ∩ I) / P(T<sub>B</sub>) 
    
-   Moreover, given the Bayes rule we can write 
-   
+   Moreover, given the Bayes rule we can write:  
    (2) P(T<sub>B</sub> ∩ I) = P(T<sub>B</sub> | I) * P(I)
    
-   Subsituting (2) into (1) we get:
-   
+   Subsituting (2) into (1) we get:  
    (3) P(I | T<sub>B</sub>) = P(T<sub>B</sub> | I) * P(I) / P(T<sub>B</sub>)
    
    Now, let take a look at P(T<sub>B</sub>). According to the law of total probability, we can visualize the probability of an event as the sum of the probability of all the intersections of the non-overlapping partitions and the event. 
    
    ie. P(A) = P(A ∩ p<sub>1</sub>) + P(A ∩ p<sub>2</sub>) + ... + P(A ∩ p<sub>n</sub>)  where 'n' is the number of non-overlapping partitions in the sample space that intersects with event A
    
-   Using the Law of total probability and Bayes Rule we can write in this case:
-   
+   Using the Law of total probability and Bayes Rule we can write in this case:  
    (4) P(T<sub>B</sub>) = P(T<sub>B</sub> | I) * P(I) + P(T<sub>B</sub> | F) * P(F)
    
-   Subsituting (4) into (3) we get:
-   
+   Subsituting (4) into (3) we get:  
    (5) P(I | T<sub>B</sub>) = P(T<sub>B</sub> | I) * P(I) / (P(T<sub>B</sub> | I) * P(I) + P(T<sub>B</sub> | F) * P(F))
    
    Because identical twins are of the same sex and assuming the birth of a child has equal probability of being either sex, P(T<sub>B</sub> | I) is the probability of twin boys given identical twin, and is (1/2). 
    
    On the other hand, fraternal twins need not be of the same sex. Given the same assumptions as above, we have P(T<sub>B</sub> | F) = (1/4).
    
-   Plugging the value in the equation we have:
+   Plugging the value in the equation we have:  
    P(I | T<sub>B</sub>) = (1/2) * (1/300) / ((1/2) * (1/300) + (1/4) * (1/125))
    = 5/11
-   
-   
-   
-   
-   
-   
-   
-
+  
 ---
 
 ### Q6. Bayesian &amp; Frequentist Comparison  
