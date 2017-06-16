@@ -42,6 +42,7 @@ def CentralMoment(xs, k):
 def Median(xs):
     cdf = thinkstats2.Cdf(xs)
     return cdf.Value(0.5) 
+
 # skewness calcuated based off of difference between mean and median
 def PearsonMedianSkewness(xs):
     median = Median(xs)
@@ -58,7 +59,6 @@ def StandardizedMoment(xs, k):
     std = math.sqrt(var)
     # std**k : square root of the second moment to the kth power
     return CentralMoment(xs, k) / std**k
-
 
 # skewness is the 3rd standardized moment
 def Skewness(xs):
