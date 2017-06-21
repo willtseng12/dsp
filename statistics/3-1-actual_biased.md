@@ -23,7 +23,7 @@ import nsfg
 #become the key for the pmfs
 
 resp = nsfg.ReadFemResp()
-pmf = thinkstats2.Pmf(resp.numkdhh, label = 'actaul numkdhh')
+pmf = thinkstats2.Pmf(resp.numkdhh, label = 'actual numkdhh')
 
 def BiasPmf(pmf, label):
     '''
